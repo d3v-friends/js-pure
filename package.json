@@ -1,0 +1,19 @@
+{
+  "name": "js-pure",
+  "version": "0.0.1",
+  "description": "js-pure",
+  "scripts": {
+    "build": "sh ./build.sh"
+  },
+  "dependencies": {
+    "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "prettier": "3.1.1",
+    "@types/node": "20.10.4"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "20.10.0"
+  }
+}
