@@ -1,3 +1,5 @@
-tsc -p ./cjs/tsconfig.json
-tsc -p ./esm/tsconfig.json
+rm -rf cjs
+rm -rf esm
+tsc -p ./config/cjs.json
+tsc -p ./config/esm.json
 git add . --all

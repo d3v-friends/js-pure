@@ -2,8 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "target": "ES5",
-    "module": "CommonJS",
-    "outDir": ".",
+    "module": "ESNext",
+    "outDir": "../esm",
     "declaration": true
   }
 }

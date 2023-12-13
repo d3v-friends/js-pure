@@ -2,8 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "target": "ES5",
-    "module": "ESNext",
-    "outDir": ".",
-    "declaration": true,
+    "module": "CommonJS",
+    "outDir": "../cjs",
+    "declaration": true
   }
 }
