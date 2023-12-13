@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import fnParam from "../fnParam";
+import fnParam from "@js-pure//fnParam";
 
 function string(key: string, ...defaultValue: string[]): string {
     const value = process.env[key] || fnParam.string(defaultValue);

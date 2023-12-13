@@ -1,4 +1,4 @@
-import fnEnv from "../fnEnv";
+import fnEnv from "@js-pure/fnEnv";
 
 function fitOS(fp: string): string {
     const slash = getSlash();

@@ -7,6 +7,13 @@
     ],
     "module": "NodeNext",
     "baseUrl": ".",
+    "paths": {
+      "@js-pure/*": [
+        "./ts/*",
+        "./esm/*",
+        "./cjs/*"
+      ]
+    },
     "allowJs": true,
     "checkJs": false,
     "inlineSourceMap": true,

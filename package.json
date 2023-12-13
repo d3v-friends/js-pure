@@ -15,5 +15,16 @@
   "engineStrict": true,
   "engines": {
     "node": "20.10.0"
+  },
+  "exports": {
+    "@js-pure/*": {
+      "default": "./ts/*"
+    },
+    "@js-pure/cjs/*": {
+      "default": "./cjs/*"
+    },
+    "@js-pure/esm/*": {
+      "default": "./esm/*"
+    }
   }
 }
