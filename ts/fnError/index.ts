@@ -1,13 +1,19 @@
-type Language = "en" | "ko";
+type Language = "en" | "ko" | string;
 type Value = Partial<Record<Language, string>>;
 
-export default class JsError extends Error {
-    constructor(
-        public readonly message: string,
-        public readonly msg: Value,
-    ) {
+export class JsError extends Error {
+    public readonly msg: Value;
+
+    constructor(message: string, ...msgs: Value[]) {
         super(message);
-        msg.en = message;
+        if (msgs.length == 0) {
+            this.msg = {
+                en: message,
+            };
+        }
+
+        this.msg = msgs[0];
+        if (!this.msg.en) this.msg.en = message;
     }
 
     public getMsg(lang: Language): string {

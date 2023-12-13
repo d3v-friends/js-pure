@@ -16,6 +16,7 @@
   "engines": {
     "node": "20.10.0"
   },
+  "type": "module",
   "exports": {
     "@js-pure/*": {
       "default": "./ts/*"
@@ -24,6 +25,7 @@
       "default": "./cjs/*"
     },
     "@js-pure/esm/*": {
+      "import": "./esm/*",
       "default": "./esm/*"
     }
   }
