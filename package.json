@@ -21,21 +21,11 @@
     "@types/node": ">=20.10.4"
   },
   "exports": {
-    "@js-pure/*": {
-      "default": [
-        "./src/*"
-      ]
-    },
-    "@js-pure/esm/*": {
-      "default": [
-        "./esm/*"
-      ]
-    },
-    "@js-pure/cjs/*": {
-      "default": [
-        "./cjs/*"
-      ]
-    }
+    "default": [
+      "./src/*",
+      "./modules/cjs/*",
+      "./modules/esm/*"
+    ]
   },
   "engineStrict": true,
   "engines": {
