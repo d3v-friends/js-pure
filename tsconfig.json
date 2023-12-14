@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
     "lib": [
-      "ES5",
-      "ES6",
-      "ESNext"
+      "ES6"
     ],
-    "module": "NodeNext",
-    "baseUrl": "src",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "baseUrl": ".",
     "paths": {
       "@js-pure/*": [
-        "./*"
+        "./src/*",
+        "./modules/cjs/*",
+        "./modules/esm/*"
       ]
     },
     "allowJs": true,
@@ -20,10 +20,10 @@
     "skipLibCheck": true
   },
   "include": [
-    "**/*.ts"
+    "./src/**/*.ts"
   ],
   "exclude": [
-    "../node_modules",
-    "../modules"
+    "./node_modules",
+    "./modules"
   ]
 }

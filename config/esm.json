@@ -2,8 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "target": "ES5",
-    "module": "NodeNext",
-    "outDir": "../esm",
+    "module": "ES6",
+    "outDir": "../modules/esm",
     "declaration": true
   }
 }
