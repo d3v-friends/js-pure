@@ -1,7 +1,7 @@
 {
   "name": "@d3v-friends/js-pure",
   "version": "0.0.1",
-  "main": "./esm/index.js",
+  "main": "./index.js",
   "files": [
     "ts",
     "esm",
@@ -29,7 +29,7 @@
       "node": "./esm/index.js",
       "import": "./esm/index.js",
       "require": "./cjs/index.js",
-      "default": "./ts/index.ts"
+      "default": "./index.ts"
     }
   },
   "engines": {

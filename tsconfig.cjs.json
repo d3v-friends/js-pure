@@ -3,8 +3,7 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "CommonJS",
-    "moduleResolution": "node",
-    "outDir": "./cjs",
+    "outDir": "./dist/cjs",
     "declaration": true,
     "inlineSourceMap": true
   }

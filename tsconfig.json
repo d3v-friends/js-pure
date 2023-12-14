@@ -10,14 +10,14 @@
     "baseUrl": ".",
     "allowJs": true,
     "checkJs": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "include": [
-    "./ts"
+    "./**/*.ts"
   ],
   "exclude": [
     "./node_modules",
-    "./cjs",
-    "./esm"
+    "./dist"
   ]
 }

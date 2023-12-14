@@ -1,4 +1,4 @@
-import { JsError } from "../fnError";
+import { JsError } from "fnError/index";
 
 type Key = "notImpl";
 const jsErrorMap: Record<Key, JsError> = {
