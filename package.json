@@ -26,17 +26,12 @@
   },
   "exports": {
     ".": {
-      "import": {
-        "types": "./esm/index.d.ts",
-        "default": "./esm/index.js"
-      },
-      "require": {
-        "types": "./cjs/index.d.ts",
-        "default": "./cjs/index.js"
-      }
+      "node": "./esm/index.js",
+      "import": "./esm/index.js",
+      "require": "./cjs/index.js",
+      "default": "./ts/index.ts"
     }
   },
-  "engineStrict": true,
   "engines": {
     "node": "^20.10.0"
   }
