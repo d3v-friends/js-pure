@@ -1,4 +1,4 @@
-import fnEnv from "fnEnv";
+import fnEnv from "../fnEnv";
 
 function fitOS(fp: string): string {
     const slash = getSlash();
@@ -20,8 +20,6 @@ function getSlash() {
     return slash;
 }
 
-const fnPath = {
+export default {
     fitOS,
 };
-
-export default fnPath;

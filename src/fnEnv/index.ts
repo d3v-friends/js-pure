@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import fnParam from "fnParam";
+import fnParam from "../fnParam";
 
 function string(key: string, ...defaultValue: string[]): string {
     const value = process.env[key] || fnParam.string(defaultValue);
@@ -40,10 +40,8 @@ async function readFile(...str: string[]): Promise<void> {
     }
 }
 
-const fnEnv = {
+export default {
     string,
     boolean,
     readFile,
 };
-
-export default fnEnv;

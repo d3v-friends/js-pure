@@ -33,12 +33,10 @@ const arrayToComma = (ls: string[]): string => {
     return res.slice(0, res.length - 1);
 };
 
-const fnParam = {
+export default {
     string,
     boolean,
     strComma,
     commaToArray,
     arrayToComma,
 };
-
-export default fnParam;

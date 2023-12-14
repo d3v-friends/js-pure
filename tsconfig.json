@@ -1,23 +1,32 @@
 {
   "compilerOptions": {
     "lib": [
-      "ES6",
-      "ES5",
-      "ESNext"
+      "es5",
+      "es6",
+      "esnext"
     ],
-    "module": "ES6",
+    "target": "es5",
+    "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": ".",
+    "strict": true,
+    "resolveJsonModule": true,
+    "rootDir": ".",
     "allowJs": true,
     "checkJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   },
   "include": [
-    "./**/*.ts"
+    "src"
   ],
   "exclude": [
-    "./node_modules",
-    "./dist"
+    "node_modules",
+    "dist"
   ]
 }

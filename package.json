@@ -1,17 +1,13 @@
 {
   "name": "@d3v-friends/js-pure",
   "version": "0.0.1",
-  "main": "./index.js",
   "files": [
-    "ts",
-    "esm",
-    "cjs",
+    "dist",
     "package.json",
-    "pnpm-lock.yaml",
-    "tsconfig.json"
+    "pnpm-lock.yaml"
   ],
   "scripts": {
-    "build": "sh build.sh"
+    "build": "webpack build --config webpack.config.ts --stats-error-details"
   },
   "dependencies": {
     "typescript": "^5.3.3"
@@ -22,14 +18,13 @@
     "terser-webpack-plugin": "^5.3.9",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "exports": {
     ".": {
-      "node": "./esm/index.js",
-      "import": "./esm/index.js",
-      "require": "./cjs/index.js",
-      "default": "./index.ts"
+      "default": "./dist/index.js"
     }
   },
   "engines": {
