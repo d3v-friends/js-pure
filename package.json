@@ -2,6 +2,7 @@
   "name": "js-pure",
   "version": "0.0.1",
   "description": "js-pure",
+  "main": "./src/index.ts",
   "scripts": {
     "build": "sh ./build.sh"
   },
@@ -12,21 +13,25 @@
     "prettier": "3.1.1",
     "@types/node": "20.10.4"
   },
+  "exports": {
+    "@js-pure/*": {
+      "default": [
+        "./src/*"
+      ]
+    },
+    "@js-pure/esm/*": {
+      "default": [
+        "./esm/*"
+      ]
+    },
+    "@js-pure/cjs/*": {
+      "default": [
+        "./cjs/*"
+      ]
+    }
+  },
   "engineStrict": true,
   "engines": {
     "node": "20.10.0"
-  },
-  "type": "module",
-  "exports": {
-    "@js-pure/*": {
-      "default": "./ts/*"
-    },
-    "@js-pure/cjs/*": {
-      "default": "./cjs/*"
-    },
-    "@js-pure/esm/*": {
-      "import": "./esm/*",
-      "default": "./esm/*"
-    }
   }
 }

@@ -3,15 +3,14 @@
     "target": "ES6",
     "lib": [
       "ES5",
-      "ES6"
+      "ES6",
+      "ESNext"
     ],
     "module": "NodeNext",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
       "@js-pure/*": [
-        "./ts/*",
-        "./esm/*",
-        "./cjs/*"
+        "./*"
       ]
     },
     "allowJs": true,
@@ -21,6 +20,10 @@
     "skipLibCheck": true
   },
   "include": [
-    "./ts/**/*.ts"
+    "**/*.ts"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../modules"
   ]
 }
