@@ -1,34 +1,43 @@
 {
-  "name": "js-pure",
+  "name": "@d3v-friends/js-pure",
   "version": "0.0.1",
-  "description": "js-pure",
-  "main": "src/index.ts",
-  "type": "module",
+  "main": "./esm/index.js",
   "files": [
-    "src",
-    "modules/esm",
-    "modules/cjs",
+    "ts",
+    "esm",
+    "cjs",
+    "package.json",
+    "pnpm-lock.yaml",
     "tsconfig.json"
   ],
   "scripts": {
     "build": "sh build.sh"
   },
   "dependencies": {
-    "typescript": ">=5.3.3"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "prettier": ">=3.1.1",
-    "@types/node": ">=20.10.4"
+    "@types/node": "^20.10.4",
+    "prettier": "^3.1.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
   },
   "exports": {
-    "./*": [
-      "./src/*",
-      "./modules/cjs/*",
-      "./modules/esm/*"
-    ]
+    ".": {
+      "import": {
+        "types": "./esm/index.d.ts",
+        "default": "./esm/index.js"
+      },
+      "require": {
+        "types": "./cjs/index.d.ts",
+        "default": "./cjs/index.js"
+      }
+    }
   },
   "engineStrict": true,
   "engines": {
-    "node": ">=20.10.0"
+    "node": "^20.10.0"
   }
 }

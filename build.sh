@@ -1,4 +1,5 @@
-rm -rf modules
-tsc -p ./config/cjs.json
-tsc -p ./config/esm.json
+rm -rf cjs
+rm -rf esm
+tsc -p ./tsconfig.cjs.json
+tsc -p ./tsconfig.esm.json
 git add . --all

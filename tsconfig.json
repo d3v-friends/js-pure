@@ -1,18 +1,13 @@
 {
   "compilerOptions": {
     "lib": [
-      "ES6"
+      "ES6",
+      "ES5",
+      "ESNext"
     ],
     "module": "ES6",
     "moduleResolution": "node",
     "baseUrl": ".",
-    "paths": {
-      "@js-pure/*": [
-        "./src/*",
-        "./modules/cjs/*",
-        "./modules/esm/*"
-      ]
-    },
     "allowJs": true,
     "checkJs": false,
     "inlineSourceMap": true,
@@ -20,10 +15,11 @@
     "skipLibCheck": true
   },
   "include": [
-    "./src/**/*.ts"
+    "./ts"
   ],
   "exclude": [
     "./node_modules",
-    "./modules"
+    "./cjs",
+    "./esm"
   ]
 }
