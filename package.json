@@ -20,6 +20,7 @@
     "pnpm-lock.yaml"
   ],
   "module": "module",
+  "main": "./src/index.ts",
   "exports": {
     ".": {
       "import": "./src/index.ts"
