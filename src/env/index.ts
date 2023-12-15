@@ -37,6 +37,7 @@ async function readFile(...str: string[]): Promise<void> {
         const ls = env.split("=");
         if (ls.length != 2) continue;
         process.env[ls[0]] = ls[1];
+        console.log(`env: ${ls[0]}=${ls[1]}`);
     }
 }
 
@@ -44,6 +45,6 @@ const fnEnv = {
     string,
     boolean,
     readFile,
-}
+};
 
 export default fnEnv;
