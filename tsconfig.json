@@ -25,7 +25,8 @@
     "strictPropertyInitialization": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "rootDir": ".",
   },
   "include": [
     "./ts"
