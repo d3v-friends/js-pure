@@ -5,10 +5,9 @@
       "es6",
       "esnext"
     ],
-    "target": "es6",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,
@@ -16,6 +15,17 @@
     "esModuleInterop": true,
     "inlineSourceMap": true,
     "declaration": true,
+    "declarationMap": true,
+    "removeComments": true,
+    // type check
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "./ts"

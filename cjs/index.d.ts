@@ -24,3 +24,4 @@ declare namespace jsPure {
     export {};
 }
 export default jsPure;
+//# sourceMappingURL=index.d.ts.map

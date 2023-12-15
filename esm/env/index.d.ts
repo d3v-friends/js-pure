@@ -7,3 +7,4 @@ declare const fnEnv: {
     readFile: typeof readFile;
 };
 export default fnEnv;
+//# sourceMappingURL=index.d.ts.map

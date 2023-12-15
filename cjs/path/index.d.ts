@@ -3,3 +3,4 @@ declare const _default: {
     fitOS: typeof fitOS;
 };
 export default _default;
+//# sourceMappingURL=index.d.ts.map
