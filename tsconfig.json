@@ -5,9 +5,9 @@
       "es6",
       "esnext"
     ],
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,
