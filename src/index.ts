@@ -2,7 +2,7 @@ import env from "./fnEnv";
 import param from "./fnParam";
 import path from "./fnPath";
 
-export namespace jsPure {
+namespace jsPure {
     export const fnEnv = env;
     export const fnParam = param;
     export const fnPath = path;
@@ -32,3 +32,5 @@ export namespace jsPure {
         }
     }
 }
+
+export default jsPure;
