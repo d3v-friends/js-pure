@@ -6,7 +6,7 @@
       "esnext"
     ],
     "target": "es6",
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "resolveJsonModule": true,
@@ -18,7 +18,7 @@
     "declaration": true,
   },
   "include": [
-    "./src"
+    "./ts"
   ],
   "exclude": [
     "/node_modules",

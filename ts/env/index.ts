@@ -37,6 +37,7 @@ async function readFile(...str: string[]): Promise<void> {
         input: fs.createReadStream(fp),
         crlfDelay: Infinity,
     });
+
     for await (const line of rl) {
         const env = line.replace(/ /g, "");
         const ls = env.split("=");

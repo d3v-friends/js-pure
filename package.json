@@ -13,22 +13,23 @@
   },
   "files": [
     "esm",
+    "cjs",
     "tsconfig.json",
     "package.json",
     "pnpm-lock.yaml"
   ],
-  "type": "commonjs",
-  "main": "./cjs/index.js",
+  "type": "module",
+  "main": "./ts/index.ts",
   "exports": {
     ".": {
       "import": "./esm/index.js",
       "require": "./cjs/index.cjs",
-      "types": "./src/index.ts"
+      "types": "./ts/index.ts"
     },
     "./*": {
       "import": "./esm/*",
       "require": "./cjs/*",
-      "types": "./src/*"
+      "types": "./ts/*"
     }
   },
   "engines": {
