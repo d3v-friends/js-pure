@@ -3,7 +3,6 @@ import path from "path";
 import readline from "readline";
 import jsPure from "../index";
 import fnParam from "../param";
-import JsError = jsPure.JsError;
 
 function string(key: string, ...defaultValue: string[]): string {
     const value = process.env[key] || fnParam.string(defaultValue);
@@ -31,7 +30,7 @@ function boolean(key: string, ...defaults: boolean[]): boolean {
 async function readFile(...str: string[]): Promise<void> {
     const fp = path.resolve(...str);
     if (!fs.existsSync(fp)) {
-        throw new JsError(`not found env file: path=${fp}`);
+        throw new jsPure.JsError(`not found env file: path=${fp}`);
     }
 
     const rl = readline.createInterface({
