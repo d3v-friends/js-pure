@@ -5,7 +5,7 @@
       "es6",
       "esnext"
     ],
-    "target": "es5",
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
@@ -16,8 +16,6 @@
     "esModuleInterop": true,
     "inlineSourceMap": true,
     "declaration": true,
-    "declarationMap": true,
-    "outDir": "./esm"
   },
   "include": [
     "./src"
