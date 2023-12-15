@@ -18,9 +18,9 @@
     "package.json",
     "pnpm-lock.yaml"
   ],
-  "type": "module",
-  "main": "./mjs/index.mjs",
-  "types": "./mjs/index.d.ts",
+  "type": "commonjs",
+  "main": "./cjs/index.cjs",
+  "types": "./cjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./mjs/index..mjs",
