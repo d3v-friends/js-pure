@@ -19,10 +19,10 @@
     "pnpm-lock.yaml"
   ],
   "type": "module",
-  "main": "./esm/index.mjs",
+  "main": "./esm/index.js",
   "exports": {
     ".": {
-      "import": "./esm/index.mjs",
+      "import": "./esm/index.js",
       "require": "./cjs/index.cjs",
       "types": "./ts/index.ts"
     },
