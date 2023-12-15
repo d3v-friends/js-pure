@@ -1,13 +1,8 @@
 {
   "name": "@d3v-friends/js-pure",
   "version": "0.0.1",
-  "files": [
-    "dist",
-    "package.json",
-    "pnpm-lock.yaml"
-  ],
   "scripts": {
-    "build": "webpack build --config webpack.config.ts --stats-error-details"
+    "build": "rm -rf ./dist && webpack --stats-error-details && git add ./dist --all"
   },
   "dependencies": {
     "typescript": "^5.3.3"
@@ -22,8 +17,16 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   },
+  "files": [
+    "dist",
+    "tsconfig.json",
+    "package.json",
+    "pnpm-lock.yaml"
+  ],
+  "module": "module",
   "exports": {
     ".": {
+      "type": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
   },

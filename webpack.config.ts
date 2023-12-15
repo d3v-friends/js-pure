@@ -20,10 +20,24 @@ const config: webpack.Configuration = {
                     },
                 ],
             },
+            {
+                test: /js-pure\/src\/index.ts/g,
+                use: [
+                    {
+                        loader: "ts-loader",
+                        options: {
+                            configFile: path.resolve(__dirname, "tsconfig.dts.json"),
+                        },
+                    },
+                ],
+            },
         ],
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx"],
+        extensions: [".ts", ".js"],
+        extensionAlias: {
+            ".js": [".ts", ".js"],
+        },
     },
     target: "node",
     plugins: [],

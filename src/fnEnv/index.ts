@@ -40,8 +40,10 @@ async function readFile(...str: string[]): Promise<void> {
     }
 }
 
-export default {
+const fnEnv = {
     string,
     boolean,
     readFile,
-};
+}
+
+export default fnEnv;

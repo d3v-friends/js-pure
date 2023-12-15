@@ -10,23 +10,26 @@
     "moduleResolution": "node",
     "strict": true,
     "resolveJsonModule": true,
-    "rootDir": ".",
     "allowJs": true,
     "checkJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "inlineSourceMap": true
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "commonjs"
+      "module": "commonjs",
+      "declaration": true,
+      "inlineSourceMap": true
     }
   },
   "include": [
-    "src"
+    "./src"
   ],
   "exclude": [
-    "node_modules",
-    "dist"
+    "/node_modules",
+    "/dist"
   ]
 }
