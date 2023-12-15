@@ -5,11 +5,12 @@
     "build": "sh build.sh"
   },
   "dependencies": {
-    "typescript": "^5.3.3"
+    "ts-loader": "^9.5.1",
+    "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.10.4",
-    "prettier": "^3.1.1"
+    "@types/node": "20.10.4",
+    "prettier": "3.1.1"
   },
   "files": [
     "mjs",
@@ -18,7 +19,9 @@
     "package.json",
     "pnpm-lock.yaml"
   ],
-  "main": "./ts/index.ts",
+  "main": "./mjs/index.mjs",
+  "type": "module",
+  "types": "./mjs/index.d.ts",
   "exports": {
     ".": {
       "import": "./mjs/index..mjs",
@@ -32,6 +35,6 @@
     }
   },
   "engines": {
-    "node": "^20.10.0"
+    "node": "20.10.0"
   }
 }
