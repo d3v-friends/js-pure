@@ -22,10 +22,10 @@
   "module": "module",
   "exports": {
     ".": {
-      "import": [
-        "./esm/index.js",
-        "./src/index.ts"
-      ]
+      "import": "./src/index.ts"
+    },
+    "./esm": {
+      "import": "./esm/index.js"
     }
   },
   "engines": {
