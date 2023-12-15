@@ -1,14 +1,14 @@
-import env from "./fnEnv";
-import param from "./fnParam";
-import path from "./fnPath";
+import fnEnv from "./env";
+import fnParam from "./param";
+import fnPath from "./path";
 
 namespace jsPure {
-    export const fnEnv = env;
-    export const fnParam = param;
-    export const fnPath = path;
+    export const env = fnEnv;
+    export const param = fnParam;
+    export const path = fnPath;
 
-    type Language = "en" | "ko" | string;
-    type ErrMsg = Partial<Record<Language, string>>;
+    type ErrLang = "en" | "ko" | string;
+    type ErrMsg = Partial<Record<ErrLang, string>>;
 
     export class JsError extends Error {
         public readonly msg: ErrMsg;
@@ -25,7 +25,7 @@ namespace jsPure {
             if (!this.msg.en) this.msg.en = message;
         }
 
-        public getMsg(lang: Language): string {
+        public getMsg(lang: ErrLang): string {
             if (this.msg.hasOwnProperty(lang)) return (this.msg as any)[lang];
             if (this.msg.hasOwnProperty("en")) return (this.msg as any)["en"];
             return "not found error msg";
