@@ -2,12 +2,11 @@
   "compilerOptions": {
     "lib": [
       "es5",
-      "es6",
-      "esnext"
+      "es6"
     ],
-    "target": "es6",
-    "module": "es6",
-    "moduleResolution": "bundler",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": false,
@@ -17,6 +16,7 @@
     "declaration": true,
     "declarationMap": true,
     "removeComments": true,
+    "outDir": "./cjs",
     // type check
     "strict": true,
     "alwaysStrict": true,
@@ -25,14 +25,14 @@
     "strictPropertyInitialization": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "rootDir": ".",
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "./ts"
   ],
   "exclude": [
     "/node_modules",
-    "/esm"
+    "/cjs",
+    "/mjs"
   ]
 }

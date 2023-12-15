@@ -18,17 +18,17 @@
     "package.json",
     "pnpm-lock.yaml"
   ],
-  "type": "commonjs",
-  "main": "./cjs/index.cjs",
-  "types": "./cjs/index.d.ts",
+  "main": "./ts/index.ts",
   "exports": {
     ".": {
       "import": "./mjs/index..mjs",
-      "require": "./cjs/index.cjs"
+      "require": "./cjs/index.cjs",
+      "default": "./ts/index.ts"
     },
     "./*": {
       "import": "./mjs/*",
-      "require": "./cjs/*"
+      "require": "./cjs/*",
+      "default": "./ts/index.ts"
     }
   },
   "engines": {
