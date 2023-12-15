@@ -10,15 +10,11 @@
   "devDependencies": {
     "@types/node": "^20.10.4",
     "prettier": "^3.1.1",
-    "terser-webpack-plugin": "^5.3.9",
-    "ts-loader": "^9.5.1",
-    "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "ts-node": "^10.9.2"
   },
   "files": [
-    "dist",
+    "esm",
+    "src",
     "tsconfig.json",
     "package.json",
     "pnpm-lock.yaml"
@@ -26,8 +22,8 @@
   "module": "module",
   "exports": {
     ".": {
-      "type": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./src/index.ts",
+      "import": "./esm/index.js"
     }
   },
   "engines": {
