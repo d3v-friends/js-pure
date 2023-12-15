@@ -2,7 +2,7 @@
   "name": "@d3v-friends/js-pure",
   "version": "0.0.1",
   "scripts": {
-    "build": "rm -rf ./esm && tsc && git add ./esm --all"
+    "build": "sh build.sh"
   },
   "dependencies": {
     "typescript": "^5.3.3"
@@ -17,16 +17,18 @@
     "package.json",
     "pnpm-lock.yaml"
   ],
-  "type": "module",
-  "main": "./esm/index.js",
+  "type": "commonjs",
+  "main": "./cjs/index.js",
   "exports": {
     ".": {
       "import": "./esm/index.js",
-      "require": "./cjs/index.cjs"
+      "require": "./cjs/index.cjs",
+      "types": "./src/index.ts"
     },
     "./*": {
       "import": "./esm/*",
-      "require": "./cjs/*"
+      "require": "./cjs/*",
+      "types": "./src/*"
     }
   },
   "engines": {
