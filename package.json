@@ -5,33 +5,23 @@
     "build": "sh build.sh"
   },
   "dependencies": {
-    "ts-loader": "^9.5.1",
     "typescript": "5.3.3"
   },
   "devDependencies": {
     "@types/node": "20.10.4",
     "prettier": "3.1.1"
   },
-  "files": [
-    "mjs",
-    "cjs",
-    "tsconfig.json",
-    "package.json",
-    "pnpm-lock.yaml"
-  ],
-  "main": "./mjs/index.mjs",
-  "type": "module",
-  "types": "./mjs/index.d.ts",
+  "main": "./cjs/index.cjs",
+  "types": "./cjs/index.d.ts",
+  "type": "commonjs",
   "exports": {
     ".": {
-      "import": "./mjs/index..mjs",
       "require": "./cjs/index.cjs",
-      "default": "./ts/index.ts"
+      "types": "./ts/index.ts"
     },
     "./*": {
-      "import": "./mjs/*",
       "require": "./cjs/*",
-      "default": "./ts/index.ts"
+      "types": "./ts/*"
     }
   },
   "engines": {

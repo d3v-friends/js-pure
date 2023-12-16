@@ -2,19 +2,19 @@
   "compilerOptions": {
     "lib": [
       "es5",
-      "es6"
+      "es6",
     ],
     "target": "es5",
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./cjs",
     "allowJs": true,
     "checkJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "inlineSourceMap": true,
-    "declaration": true,
     "removeComments": true,
-    "rootDir": "./ts",
+    "declaration": true,
     // type check
     "strict": true,
     "alwaysStrict": true,
@@ -30,6 +30,7 @@
   ],
   "exclude": [
     "./node_modules",
-    "./cjs"
+    "./cjs",
+    "./mjs"
   ]
 }
