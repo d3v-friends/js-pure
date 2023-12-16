@@ -1,3 +1,5 @@
+import * as process from "process";
+
 export default function (key: string, ...defaults: boolean[]): boolean {
     const value = process.env[key] || "";
     if (value === "") {

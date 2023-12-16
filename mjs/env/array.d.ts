@@ -1,2 +1,1 @@
-declare function array(key: string): string[];
-export default array;
+export default function (key: string): string[];

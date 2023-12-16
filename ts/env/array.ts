@@ -1,6 +1,6 @@
 import * as process from "process";
 
-function array(key: string): string[] {
+export default function (key: string): string[] {
     let str = process.env[key] || "";
     for (let i = 0; i < str.lastIndexOf(" "); i++) {
         str = str.replace(" ", "");
@@ -12,5 +12,3 @@ function array(key: string): string[] {
     str = str.slice(1, str.length - 1);
     return str.split(",");
 }
-
-export default array;

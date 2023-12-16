@@ -3,9 +3,11 @@ import read from "./read";
 import string from "./string";
 import array from "./array";
 
-export default {
+const fnEnv = {
     string,
     boolean,
     read,
     array,
-};
+}
+
+export default fnEnv;

@@ -2,6 +2,7 @@ import fnErr from "@src/err";
 import fs from "fs";
 import path from "path";
 import readline from "readline";
+import * as process from "process";
 
 export default async function (...str: string[]): Promise<void> {
     const fp = path.resolve(...str);
