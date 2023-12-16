@@ -28,6 +28,9 @@
       "import": "./mjs/*",
       "require": "./cjs/*",
       "types": "./ts/*"
+    },
+    "./type": {
+      "default": "./ts/type/index.ts"
     }
   },
   "engines": {
