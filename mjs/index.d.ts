@@ -1,5 +1,3 @@
-import fnEnv from "./env";
-import fnParam from "./param";
-import fnPath from "./path";
-import JsError from "./jsError";
-export { fnEnv, fnPath, fnParam, JsError };
+export * as fnEnv from "./env";
+export * as fnParam from "./param";
+export { default as JsError } from "./jsError";

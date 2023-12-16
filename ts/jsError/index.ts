@@ -1,7 +1,7 @@
 type ErrLang = "en" | "ko" | string;
 type ErrMsg = Partial<Record<ErrLang, string>>;
 
-class JsError extends Error {
+export default class extends Error {
     public readonly msg: ErrMsg;
 
     constructor(message: string, ...msgs: ErrMsg[]) {
@@ -22,5 +22,3 @@ class JsError extends Error {
         return "not found error msg";
     }
 }
-
-export default JsError;

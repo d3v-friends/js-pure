@@ -1,9 +1,9 @@
-declare function string(key: string, ...defaultValue: string[]): string;
-declare function boolean(key: string, ...defaults: boolean[]): boolean;
-declare function readFile(...str: string[]): Promise<void>;
-declare const fnEnv: {
+import boolean from "./boolean";
+import read from "./read";
+import string from "./string";
+declare const _default: {
     string: typeof string;
     boolean: typeof boolean;
-    readFile: typeof readFile;
+    read: typeof read;
 };
-export default fnEnv;
+export default _default;
