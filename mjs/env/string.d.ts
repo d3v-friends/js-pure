@@ -1,1 +1,1 @@
-export default function fn(key: string, ...defaultValue: string[]): string;
+export default function (key: string, ...defaultValue: string[]): string;

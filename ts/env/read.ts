@@ -1,4 +1,4 @@
-import JsError from "@src/jsError";
+import { JsError } from "@src/jsError";
 import fs from "fs";
 import path from "path";
 import readline from "readline";

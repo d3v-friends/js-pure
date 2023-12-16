@@ -1,1 +1,1 @@
-export default function fn(...str: string[]): Promise<void>;
+export default function (...str: string[]): Promise<void>;
