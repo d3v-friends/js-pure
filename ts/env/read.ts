@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import readline from "readline";
 
-export default async function fn(...str: string[]): Promise<void> {
+export default async function (...str: string[]): Promise<void> {
     const fp = path.resolve(...str);
     if (!fs.existsSync(fp)) {
         throw new JsError(`not found env file: path=${fp}`, {
