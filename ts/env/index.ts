@@ -1,7 +1,7 @@
+import JsError from "@src/jsError";
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import jsPure from "../index";
 import fnParam from "../param";
 
 function string(key: string, ...defaultValue: string[]): string {
@@ -30,7 +30,7 @@ function boolean(key: string, ...defaults: boolean[]): boolean {
 async function readFile(...str: string[]): Promise<void> {
     const fp = path.resolve(...str);
     if (!fs.existsSync(fp)) {
-        throw new jsPure.JsError(`not found env file: path=${fp}`);
+        throw new JsError(`not found env file: path=${fp}`);
     }
 
     const rl = readline.createInterface({
