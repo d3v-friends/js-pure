@@ -1,10 +1,6 @@
-import env from "@src/env";
-import param from "@src/param";
-import path from "@src/path";
-import JsErrorClass from "@src/jsError";
+import fnEnv from "@src/env";
+import fnParam from "@src/param";
+import fnPath from "@src/path";
+import JsError from "@src/jsError";
 
-export const fnEnv = env;
-export const fnParam = param;
-export const fnPath = path;
-
-export class JsError extends JsErrorClass {}
+export { fnEnv, fnPath, fnParam, JsError };
