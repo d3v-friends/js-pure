@@ -2,18 +2,12 @@
 
 set -e
 
-rm -rf cjs
-echo ">> tsc cjs"
-tsc -p tsconfig.json
-echo ">> tsc-alias cjs"
-tsc-alias -p tsconfig.json
-find ./cjs -type f -name '*.js' -exec rename 's/\.js/\.cjs/' '{}' \;
-git add cjs --all
-
-rm -rf mjs
-echo ">> tsc mjs"
-tsc -p tsconfig.mjs.json
-echo ">> tsc-alias mjs"
-tsc-alias -p tsconfig.mjs.json
-find ./mjs -type f -name '*.js' -exec rename 's/\.js/\.mjs/' '{}' \;
-git add mjs --all
+for JS in "mjs" "cjs"; do
+   rm -rf "$JS"
+   echo ">> tsc "$JS""
+   tsc -p tsconfig.$JS.json
+   echo ">> tsc-alias $JS"
+   tsc-alias -p tsconfig.$JS.json
+   find "./$JS" -type f -name '*.js' -exec rename "s/\.js/\.$JS/" "{}" \;
+   git add $JS --all
+done
