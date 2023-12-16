@@ -2,7 +2,7 @@
   "compilerOptions": {
     "lib": [
       "es5",
-      "es6",
+      "es6"
     ],
     "target": "es5",
     "module": "commonjs",
@@ -23,7 +23,13 @@
     "strictPropertyInitialization": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "rootDir": "./ts",
+    "paths": {
+      "@src/*": [
+        "./ts/*"
+      ]
+    }
   },
   "include": [
     "./ts"

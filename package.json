@@ -9,17 +9,19 @@
   },
   "devDependencies": {
     "@types/node": "20.10.4",
-    "prettier": "3.1.1"
+    "prettier": "3.1.1",
+    "tsc-alias": "^1.8.8"
   },
   "main": "./cjs/index.cjs",
   "types": "./cjs/index.d.ts",
-  "type": "commonjs",
   "exports": {
     ".": {
+      "import": "./mjs/index.mjs",
       "require": "./cjs/index.cjs",
       "types": "./ts/index.ts"
     },
     "./*": {
+      "import": "./mjs/index.mjs",
       "require": "./cjs/*",
       "types": "./ts/*"
     }

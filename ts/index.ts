@@ -1,6 +1,6 @@
-import fnEnv from "./env";
-import fnParam from "./param";
-import fnPath from "./path";
+import fnEnv from "@src/env";
+import fnParam from "@src/param";
+import fnPath from "@src/path";
 
 namespace jsPure {
     export const env = fnEnv;
