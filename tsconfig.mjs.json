@@ -1,11 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "outDir": "./dist/mjs",
     "module": "es6",
-    "moduleResolution": "node",
-    "outDir": "./mjs"
-  },
-  "include": [
-    "./ts"
-  ]
+    "moduleResolution": "node"
+  }
 }

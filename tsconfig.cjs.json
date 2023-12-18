@@ -1,9 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./cjs"
-  },
-  "include": [
-    "./ts"
-  ]
+    "outDir": "./dist/cjs"
+  }
 }

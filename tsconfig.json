@@ -11,10 +11,6 @@
     "checkJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "inlineSourceMap": true,
-    "removeComments": true,
-    "declaration": true,
-    "outDir": "./cjs",
     // type check
     "strict": true,
     "alwaysStrict": true,
@@ -25,23 +21,30 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     // paths
-    "rootDir": "./ts",
+    "rootDir": ".",
     "paths": {
       "@src/*": [
-        "./ts/*"
-      ],
-      "@src": [
-        "./ts/index.ts"
+        "./*"
       ]
+    },
+    "outDir": "./dist/cjs",
+    // compile,
+    "inlineSourceMap": true,
+    "removeComments": true,
+    "declaration": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
     }
   },
-  "include": [
-    "./ts",
-    "./test"
-  ],
   "exclude": [
+    "./dist",
     "./node_modules",
-    "./cjs",
-    "./mjs"
+    "./jest.config.ts",
+    "./webpack.config.ts",
+    "./test",
+    "./dist/cjs",
+    "./dist/mjs"
   ]
 }
