@@ -58,7 +58,6 @@
     "./node_modules",
     "./jest.config.ts",
     "./webpack.config.ts",
-    "./test",
     "./dist/cjs",
     "./dist/mjs"
   ]
