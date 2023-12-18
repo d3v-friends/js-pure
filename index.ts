@@ -1,13 +1,6 @@
-import fnEnv from "@src/env";
-import fnErr from "@src/err";
-import fnParam from "@src/param";
-import fnPath from "@src/path";
+export { default as fnEnv } from "@src/env";
+export { default as fnErr } from "@src/err";
+export { default as fnParam } from "@src/param";
+export { default as fnPath } from "@src/path";
 
 export type Nullable<T> = T | null | undefined;
-
-export default {
-    fnEnv,
-    fnPath,
-    fnErr,
-    fnParam,
-};
