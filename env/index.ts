@@ -1,4 +1,11 @@
-export { default as array } from "./array";
-export { default as boolean } from "./boolean";
-export { default as read } from "./read";
-export { default as string } from "./string";
+import array from "./array";
+import boolean from "./boolean";
+import read from "./read";
+import string from "./string";
+
+export const fnEnv = {
+    array,
+    boolean,
+    read,
+    string,
+};

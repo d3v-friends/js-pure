@@ -1,2 +1,9 @@
-export { default as fromCsv } from "./fromCsv";
-export { default as toCsv } from "./toCsv";
+import fromCsv from "./fromCsv";
+import toCsv from "./toCsv";
+
+export const fnStr = {
+    csv: {
+        from: fromCsv,
+        to: toCsv,
+    },
+};

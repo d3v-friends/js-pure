@@ -25,24 +25,8 @@
     "paths": {
       "@src/*": [
         "./*"
-      ],
-      "@env/*": [
-        "./env/*"
-      ],
-      "@param/*": [
-        "./param/*"
-      ],
-      "@str/*": [
-        "./str/*"
-      ],
-      "@type/*": [
-        "./type/*"
-      ],
-      "@err/*": [
-        "./err/*"
       ]
     },
-    "outDir": "./dist/cjs",
     // compile,
     "inlineSourceMap": true,
     "removeComments": true,

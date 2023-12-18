@@ -1,4 +1,4 @@
-export { Nullable } from "@type/index";
-export * as fnError from "./err";
-export * as fnEnv from "./env";
-export * as fnParam from "./param";
+export { fnErr } from "./err";
+export { fnEnv } from "./env";
+export { fnParam } from "./param";
+export type Nullable<T> = T | null | undefined;
