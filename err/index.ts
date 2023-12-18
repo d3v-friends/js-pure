@@ -1,9 +1,2 @@
-import Error from "./jsError";
-import msg from "./message";
-
-const fnErr = {
-    Error,
-    msg,
-};
-
-export default fnErr;
+export { default as getMsg } from "./getMsg";
+export { default as JsError } from "./jsError";
