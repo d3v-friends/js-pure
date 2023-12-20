@@ -1,17 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.fnEnv = void 0;
-var array_1 = __importDefault(require("./array"));
-var boolean_1 = __importDefault(require("./boolean"));
-var read_1 = __importDefault(require("./read"));
-var string_1 = __importDefault(require("./string"));
-exports.fnEnv = {
-    array: array_1.default,
-    boolean: boolean_1.default,
-    read: read_1.default,
-    string: string_1.default,
-};
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi90cy9lbnYvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsa0RBQTRCO0FBQzVCLHNEQUFnQztBQUNoQyxnREFBMEI7QUFDMUIsb0RBQThCO0FBRWpCLFFBQUEsS0FBSyxHQUFHO0lBQ2pCLEtBQUssaUJBQUE7SUFDTCxPQUFPLG1CQUFBO0lBQ1AsSUFBSSxnQkFBQTtJQUNKLE1BQU0sa0JBQUE7Q0FDVCxDQUFDIn0=
+exports.getBoolean = exports.getArray = exports.getString = exports.read = void 0;
+var simple_1 = require("./simple");
+Object.defineProperty(exports, "read", { enumerable: true, get: function () { return simple_1.read; } });
+Object.defineProperty(exports, "getString", { enumerable: true, get: function () { return simple_1.getString; } });
+Object.defineProperty(exports, "getArray", { enumerable: true, get: function () { return simple_1.getArray; } });
+Object.defineProperty(exports, "getBoolean", { enumerable: true, get: function () { return simple_1.getBoolean; } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi90cy9lbnYvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7O0FBQUEsbUNBQWlFO0FBQXhELDhGQUFBLElBQUksT0FBQTtBQUFFLG1HQUFBLFNBQVMsT0FBQTtBQUFFLGtHQUFBLFFBQVEsT0FBQTtBQUFFLG9HQUFBLFVBQVUsT0FBQSJ9

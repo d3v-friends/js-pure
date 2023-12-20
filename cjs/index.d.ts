@@ -1,4 +1,7 @@
-export { JsError } from "./err";
-export { fnEnv } from "./env";
-export { fnParam } from "./param";
-export { fnStr } from "./str";
+import * as env from "./env";
+export declare const fnEnv: {
+    array: typeof env.getArray;
+    string: typeof env.getString;
+    boolean: typeof env.getBoolean;
+    read: typeof env.read;
+};

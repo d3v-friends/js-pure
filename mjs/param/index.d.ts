@@ -1,6 +1,2 @@
-import boolean from "./boolean";
-import string from "./string";
-export declare const fnParam: {
-    boolean: typeof boolean;
-    string: typeof string;
-};
+export declare function getBool(v: boolean[], ...defaults: boolean[]): boolean;
+export declare function getString(v: string[], ...defaults: string[]): string;
