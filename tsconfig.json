@@ -5,8 +5,8 @@
       "es6",
       "esnext"
     ],
-    "target": "es6",
-    "module": "es6",
+    "target": "es5",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "allowJs": true,
@@ -23,7 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "isolatedModules": false,
     // paths
-    "rootDir": ".",
+    "rootDir": "./ts",
     // compile types,
     "inlineSourceMap": true,
     "removeComments": true,
@@ -38,14 +38,12 @@
   },
   "include": [
     "./ts/*",
-    "./test/*"
   ],
   "exclude": [
-    "./dist",
     "./node_modules",
     "./jest.config.ts",
     "./webpack.config.ts",
-    "./dist/cjs",
-    "./dist/mjs"
+    "./cjs",
+    "./mjs"
   ]
 }

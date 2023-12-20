@@ -17,9 +17,9 @@
     "ts-jest": "29.1.1",
     "tsc-alias": "1.8.8"
   },
-  "main": "./cjs/index.js",
-  "types": "./cjs/index.d.ts",
-  "type": "commonjs",
+  "main": "./mjs/index.js",
+  "types": "./mjs/index.d.ts",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./mjs/index.js",
@@ -29,6 +29,6 @@
     }
   },
   "engines": {
-    "node": "20.10.0"
+    "node": "^20.10.0"
   }
 }
