@@ -23,8 +23,8 @@
   "type": "commonjs",
   "exports": {
     ".": {
-      "import": "./mjs/index.js",
-      "require": "./cjs/index.js"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "engines": {
