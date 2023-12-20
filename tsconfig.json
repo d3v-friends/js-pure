@@ -22,14 +22,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "isolatedModules": false,
-    // paths
-    "rootDir": "./ts",
-    // compile types,
-    "inlineSourceMap": true,
-    "removeComments": true,
-    "declaration": true,
-    // d.ts only compile
-    "emitDeclarationOnly": false
+    // path
+    "rootDir": "./src"
   },
   "ts-node": {
     "compilerOptions": {
@@ -37,13 +31,11 @@
     }
   },
   "include": [
-    "./ts/*",
+    "./src"
   ],
   "exclude": [
     "./node_modules",
-    "./jest.config.ts",
-    "./webpack.config.ts",
-    "./cjs",
-    "./mjs"
+    "./config",
+    "./dist"
   ]
 }

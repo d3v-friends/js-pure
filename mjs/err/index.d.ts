@@ -1,1 +1,0 @@
-export { JsError } from "./error";
