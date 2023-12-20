@@ -1,19 +1,12 @@
-import { fnErr } from "@src/err";
 import fs from "fs";
 import path from "path";
 import readline from "readline";
+import { JsError } from "../err";
 
 export default async function (...str: string[]): Promise<void> {
     const fp = path.resolve(...str);
     if (!fs.existsSync(fp)) {
-        throw new fnErr.Error(
-            fnErr.getMsg("not found env file", {
-                fp,
-            }),
-            {
-                ko: `환경변수 파일을 찾지 못하였습니다. path=${fp}`,
-            },
-        );
+        throw new JsError("not found env file", { fp }, { ko: `환경변수 파일을 찾지 못하였습니다.` });
     }
 
     const rl = readline.createInterface({

@@ -1,19 +1,24 @@
 type ErrLang = "en" | "ko" | string;
 type ErrMsg = Partial<Record<ErrLang, string>>;
 
-export default class extends Error {
+export class JsError extends Error {
     public readonly msg: ErrMsg;
 
-    constructor(message: string, ...msgs: ErrMsg[]) {
+    constructor(message: string, args?: object, msg?: ErrMsg) {
+        message = `${message}: ${JSON.stringify(args || {})}`;
         super(message);
-        if (msgs.length == 0) {
+
+        if (!msg) {
             this.msg = {
                 en: message,
             };
+            return;
         }
 
-        this.msg = msgs[0];
-        if (!this.msg.en) this.msg.en = message;
+        this.msg = {
+            en: message,
+            ...msg,
+        };
     }
 
     public getMsg(lang: ErrLang): string {

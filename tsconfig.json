@@ -2,15 +2,16 @@
   "compilerOptions": {
     "lib": [
       "es5",
-      "es6"
+      "es6",
+      "esnext"
     ],
-    "target": "es5",
-    "module": "nodenext",
+    "target": "es6",
+    "module": "es6",
     "moduleResolution": "bundler",
+    "esModuleInterop": true,
     "allowJs": true,
     "checkJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": true,
     // type check
     "strict": true,
     "alwaysStrict": true,
@@ -20,23 +21,25 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "isolatedModules": false,
     // paths
     "rootDir": ".",
-    "paths": {
-      "@src/*": [
-        "./*"
-      ]
-    },
-    // compile,
+    // compile types,
     "inlineSourceMap": true,
     "removeComments": true,
-    "declaration": true
+    "declaration": true,
+    // d.ts only compile
+    "emitDeclarationOnly": false
   },
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
     }
   },
+  "include": [
+    "./ts/*",
+    "./test/*"
+  ],
   "exclude": [
     "./dist",
     "./node_modules",
