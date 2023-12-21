@@ -5,9 +5,9 @@
     "build": "sh build.sh"
   },
   "dependencies": {
-    "typescript": "5.3.3"
   },
   "devDependencies": {
+    "typescript": "5.3.3",
     "@jest/globals": "29.7.0",
     "@types/node": "20.10.4",
     "dts-bundle-generator": "9.0.0",
@@ -16,6 +16,9 @@
     "prettier": "3.1.1",
     "ts-jest": "29.1.1",
     "ts-node": "10.9.2"
+  },
+  "bin": {
+    "pack": "dist/cli.cjs"
   },
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",

@@ -21,21 +21,13 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "isolatedModules": false,
-    // path
-    "rootDir": "./src"
   },
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
     }
   },
-  "include": [
-    "./src"
-  ],
   "exclude": [
-    "./node_modules",
-    "./config",
-    "./dist"
+    "node_modules"
   ]
 }
