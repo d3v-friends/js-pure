@@ -21,5 +21,6 @@ export declare namespace fnParam {
 }
 export type ErrLang = "en" | "ko" | string;
 export type ErrMsg = Partial<Record<ErrLang, string>>;
+export type Nullable<RES> = RES | null | undefined;
 
 export {};

@@ -1,7 +1,7 @@
 /** @type import('dts-bundle-generator/config-schema').BundlerConfig */
 module.exports = {
     compilationOptions: {
-        preferredConfigPath: "../tsconfig.json",
+        preferredConfigPath: "../src/tsconfig.json",
     },
     entries: [
         {
@@ -9,9 +9,9 @@ module.exports = {
             outFile: "../dist/index.d.ts",
             noCheck: false,
             output: {
-                inlineDeclareGlobals: true,
+                inlineDeclareGlobals: false,
                 sortNodes: true,
-            }
+            },
         },
     ],
 };
