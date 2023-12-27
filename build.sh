@@ -1,6 +1,6 @@
-# pnpm add -D esbuild
-# pnpm add -D dts-bundle-generator
+CJS="./config/tsconfig.cjs.json"
+MJS="./config/tsconfig.mjs.json"
 rm -rf ./dist
-node ./config/esbuild.cjs
-dts-bundle-generator --config ./config/dts.cjs
+tsc -p "$CJS" && tsc-alias -p "$CJS"
+tsc -p "$MJS" && tsc-alias -p "$MJS"
 git add ./dist --all

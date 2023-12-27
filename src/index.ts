@@ -1,6 +1,5 @@
-export { JsError } from "./err";
-export { fnParam } from "./param";
-export { fnEnv } from "./env";
-export { fnCsv } from "./csv";
-
-export type Nullable<RES> = RES | null | undefined;
+export { JsError } from "@src/err";
+export { fnParam } from "@src/param";
+export { fnEnv } from "@src/env";
+export { fnCsv } from "@src/csv";
+export * from "@src/type";

@@ -1,20 +1,19 @@
 import fs from "fs";
 import path from "path";
 import readline from "readline";
-import { JsError } from "../err";
-import { fnParam } from "../param";
+import { JsError } from "@src/err";
+import { fnParam } from "@src/param";
 
-export namespace fnEnv {
-    export function string(key: string, ...defaultValue: string[]): string {
+export const fnEnv = {
+    string: (key: string, ...defaultValue: string[]): string => {
         const value = process.env[key] || fnParam.string(defaultValue);
         if (value == "") {
             console.log(`not found env: key=${key}`);
             process.exit(1);
         }
         return value;
-    }
-
-    export async function read(...str: string[]): Promise<void> {
+    },
+    read: async (...str: string[]): Promise<void> => {
         const fp = path.resolve(...str);
         if (!fs.existsSync(fp)) {
             throw new JsError("not found env file", { fp }, { ko: `환경변수 파일을 찾지 못하였습니다.` });
@@ -32,9 +31,8 @@ export namespace fnEnv {
             process.env[ls[0]] = ls[1];
             console.log(`env: ${ls[0]}=${ls[1]}`);
         }
-    }
-
-    export function boolean(key: string, ...defaults: boolean[]): boolean {
+    },
+    boolean: (key: string, ...defaults: boolean[]): boolean => {
         const value = process.env[key] || "";
         if (value === "") {
             if (defaults.length === 0) {
@@ -46,9 +44,8 @@ export namespace fnEnv {
         }
 
         return value === "true";
-    }
-
-    export function array(key: string, ...defaults: string[][]): string[] {
+    },
+    array: (key: string, ...defaults: string[][]): string[] => {
         let str = process.env[key] || "";
         if (!str) {
             if (defaults.length === 0) return [];
@@ -61,5 +58,5 @@ export namespace fnEnv {
         if (!str.endsWith("]")) return [];
         str = str.slice(1, str.length - 1);
         return str.split(",");
-    }
-}
+    },
+};
